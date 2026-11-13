@@ -1,0 +1,58 @@
+# 关键域名白名单（只用于“删除上游的 Reject 规则”）
+#
+# 作用：上游广告列表/GFW 列表偶尔会把支付、系统、政务域名误杀。
+# 这里列出的域名即使出现在上游 Reject 里，构建时也会被移除，避免
+# “开了小火箭，App Store / 微信支付 / 政务 App 打不开”。
+#
+# 格式：一行一个域名；匹配该域名及其所有子域。
+# 注意：白名单只删除“上游规则”的 Reject，不会覆盖本项目 wechat-ad.list 里的广告规则。
+# 想放行微信广告，请删 wechat-ad.list 中对应行，而不是加到这里。
+
+# ── 微信 / 小程序 / 支付核心 ──
+weixin.qq.com
+weixin.qq.com.cn
+wechat.com
+weixin.com
+wechatpay.cn
+wx.qq.com
+servicewechat.com
+tenpay.com
+wechatpay.com
+weixinbridge.com
+weixin110.qq.com
+qpic.cn
+qlogo.cn
+wx.gtimg.com
+wxapp.tc.qq.com
+vweixinf.tc.qq.com
+vweixinthumb.tc.qq.com
+dldir1.qq.com
+dldir1v6.qq.com
+apd-pcdnwxlogin.teg.tencent-cloud.net
+map.qq.com
+lbs.gtimg.com
+up-hl.3g.qq.com
+yun-hl.3g.qq.com
+
+# ── 支付 ──
+alipay.com
+alipayobjects.com
+unionpay.com
+95516.com
+
+# ── Apple 系统 / App Store / 推送（防止无法下载 App、无法定位）──
+appleid.apple.com
+idmsa.apple.com
+gs-loc.apple.com
+captive.apple.com
+ocsp.apple.com
+crl.apple.com
+apps.apple.com
+itunes.apple.com
+
+# ── 微软系统更新 ──
+windowsupdate.com
+msftconnecttest.com
+
+# ── 政务 ──
+gov.cn

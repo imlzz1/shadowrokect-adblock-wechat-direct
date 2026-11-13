@@ -1,0 +1,37 @@
+# 微信小程序 / 微信广告拦截域名
+#
+# 说明：
+#   - 这些规则必须排在“微信直连”以及任何宽泛的 qq.com 直连规则之前。
+#   - 只做域名拦截，不需要 MITM / 证书，不会解密聊天内容。
+#   - 代理层只能拦“网络请求”。小程序自己用 JS 画的广告、或已经缓存的广告，
+#     无法靠域名规则去掉。
+#   - 如果某个小程序因为拦了 wxs.qq.com 打不开，删除对应那一行即可。
+#
+# 来源（交叉核对）：
+#   - https://github.com/k6nfmm7dbr-commits/wechat-lite (MIT)
+#   - https://github.com/blackmatrix7/ios_rule_script
+#   - https://github.com/TG-Twilight/AWAvenue-Ads-Rule
+#   - https://github.com/QingRex/LoonKissSurge
+
+# ── 微信广告投放主域（小程序广告位、公众号广告位）──
+DOMAIN-SUFFIX,wxs.qq.com,Reject
+DOMAIN,wxsmsdy.video.qq.com,Reject
+
+# ── 腾讯广告联盟 / 广点通 GDT（广告素材、曝光与点击上报）──
+DOMAIN-SUFFIX,gdt.qq.com,Reject
+DOMAIN-SUFFIX,gdtimg.com,Reject
+DOMAIN-SUFFIX,ugdtimg.com,Reject
+DOMAIN-SUFFIX,pgdt.gtimg.cn,Reject
+DOMAIN-SUFFIX,ad.qq.com,Reject
+DOMAIN-SUFFIX,adsfile.qq.com,Reject
+DOMAIN-SUFFIX,adslvfile.qq.com,Reject
+DOMAIN-SUFFIX,l.qq.com,Reject
+DOMAIN,sdk.e.qq.com,Reject
+DOMAIN,tangram.e.qq.com,Reject
+
+# ── 微信统计 / 埋点（对功能影响很小；介意可整段删除）──
+DOMAIN,otheve.beacon.qq.com,Reject
+DOMAIN,oth.str.mdt.qq.com,Reject
+DOMAIN-SUFFIX,pingjs.qq.com,Reject
+DOMAIN-SUFFIX,tajs.qq.com,Reject
+DOMAIN-SUFFIX,ta.qq.com,Reject

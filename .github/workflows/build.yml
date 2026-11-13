@@ -1,0 +1,66 @@
+name: Build Shadowrocket rules
+
+on:
+  # 每天北京时间 08:30 构建（GitHub Actions 使用 UTC；00:30 UTC = 08:30 CST）。
+  # 上游每天北京时间 08:00 左右更新，留 30 分钟缓冲。
+  schedule:
+    - cron: "30 0 * * *"
+  # 手动运行：Actions -> Build Shadowrocket rules -> Run workflow
+  workflow_dispatch:
+  # 修改规则/脚本后自动重建
+  push:
+    branches: [main]
+    paths:
+      - "config/**"
+      - "scripts/**"
+      - "tests/**"
+      - "NOTICE.md"
+      - ".github/workflows/build.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shadowrocket-rules-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Build config
+        run: python scripts/build.py
+
+      - name: Validate config
+        run: python scripts/validate.py
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: shadowrocket-rules
+          path: dist/
+          retention-days: 14
+
+      - name: Publish release branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: release
+          publish_dir: ./dist
+          keep_files: false
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "chore: auto update Shadowrocket rules"
