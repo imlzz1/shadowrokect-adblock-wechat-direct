@@ -1,0 +1,25 @@
+#!name=微信小程序 / 微信广告拦截
+#!desc=拦截微信广告投放域与广点通 GDT 广告素材；纯域名规则，无需证书。请确保它排在宽泛的 qq.com 直连规则之前。
+#!author=shadowrocket-wechat-rules
+#!category=去广告
+#!date=2026-11-13
+
+[Rule]
+
+DOMAIN-SUFFIX,wxs.qq.com,Reject
+DOMAIN,wxsmsdy.video.qq.com,Reject
+DOMAIN-SUFFIX,gdt.qq.com,Reject
+DOMAIN-SUFFIX,gdtimg.com,Reject
+DOMAIN-SUFFIX,ugdtimg.com,Reject
+DOMAIN-SUFFIX,pgdt.gtimg.cn,Reject
+DOMAIN-SUFFIX,ad.qq.com,Reject
+DOMAIN-SUFFIX,adsfile.qq.com,Reject
+DOMAIN-SUFFIX,adslvfile.qq.com,Reject
+DOMAIN-SUFFIX,l.qq.com,Reject
+DOMAIN,sdk.e.qq.com,Reject
+DOMAIN,tangram.e.qq.com,Reject
+DOMAIN,otheve.beacon.qq.com,Reject
+DOMAIN,oth.str.mdt.qq.com,Reject
+DOMAIN-SUFFIX,pingjs.qq.com,Reject
+DOMAIN-SUFFIX,tajs.qq.com,Reject
+DOMAIN-SUFFIX,ta.qq.com,Reject

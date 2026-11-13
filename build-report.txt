@@ -1,0 +1,80 @@
+Shadowrocket 规则构建报告
+========================================
+生成时间： 2026-11-13 16:49:07 +0800
+上游来源： https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_top500_banlist_ad.conf
+上游构建： UTC 2026-11-12 23:02:32
+
+规则统计
+----------------------------------------
+上游规则数：       83072
+注入广告规则：     17
+注入微信直连规则： 33
+因冲突跳过：       3
+因白名单跳过：     0
+删除宽泛关键字：   1
+删除不支持类型：   1
+删除重复规则：     68
+删除被覆盖规则：   1242
+最终规则数：       81807（含 FINAL）
+
+策略分布（不含 FINAL）
+----------------------------------------
+DIRECT: 33
+Proxy: 29008
+Reject: 52765
+
+微信广告拦截规则
+----------------------------------------
+DOMAIN-SUFFIX,wxs.qq.com,Reject
+DOMAIN,wxsmsdy.video.qq.com,Reject
+DOMAIN-SUFFIX,gdt.qq.com,Reject
+DOMAIN-SUFFIX,gdtimg.com,Reject
+DOMAIN-SUFFIX,ugdtimg.com,Reject
+DOMAIN-SUFFIX,pgdt.gtimg.cn,Reject
+DOMAIN-SUFFIX,ad.qq.com,Reject
+DOMAIN-SUFFIX,adsfile.qq.com,Reject
+DOMAIN-SUFFIX,adslvfile.qq.com,Reject
+DOMAIN-SUFFIX,l.qq.com,Reject
+DOMAIN,sdk.e.qq.com,Reject
+DOMAIN,tangram.e.qq.com,Reject
+DOMAIN,otheve.beacon.qq.com,Reject
+DOMAIN,oth.str.mdt.qq.com,Reject
+DOMAIN-SUFFIX,pingjs.qq.com,Reject
+DOMAIN-SUFFIX,tajs.qq.com,Reject
+DOMAIN-SUFFIX,ta.qq.com,Reject
+
+微信直连规则
+----------------------------------------
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,weixin.qq.com.cn,DIRECT
+DOMAIN-SUFFIX,wechat.com,DIRECT
+DOMAIN-SUFFIX,weixin.com,DIRECT
+DOMAIN-SUFFIX,wechatpay.cn,DIRECT
+DOMAIN-SUFFIX,wx.qq.com,DIRECT
+DOMAIN-SUFFIX,weixinbridge.com,DIRECT
+DOMAIN-SUFFIX,wechatlegal.net,DIRECT
+DOMAIN-SUFFIX,wechatos.net,DIRECT
+DOMAIN-SUFFIX,weixinsxy.com,DIRECT
+DOMAIN,weixin110.qq.com,DIRECT
+DOMAIN-SUFFIX,servicewechat.com,DIRECT
+DOMAIN-SUFFIX,wxapp.tc.qq.com,DIRECT
+DOMAIN-SUFFIX,vweixinf.tc.qq.com,DIRECT
+DOMAIN-SUFFIX,vweixinthumb.tc.qq.com,DIRECT
+DOMAIN-SUFFIX,tenpay.com,DIRECT
+DOMAIN-SUFFIX,wechatpay.com,DIRECT
+DOMAIN-SUFFIX,qpic.cn,DIRECT
+DOMAIN-SUFFIX,qlogo.cn,DIRECT
+DOMAIN-SUFFIX,wx.gtimg.com,DIRECT
+DOMAIN-SUFFIX,lbs.gtimg.com,DIRECT
+DOMAIN-SUFFIX,map.qq.com,DIRECT
+DOMAIN-SUFFIX,up-hl.3g.qq.com,DIRECT
+DOMAIN-SUFFIX,yun-hl.3g.qq.com,DIRECT
+DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net,DIRECT
+DOMAIN,dldir1.qq.com,DIRECT
+DOMAIN,dldir1v6.qq.com,DIRECT
+DOMAIN,wup.imtt.qq.com,DIRECT
+DOMAIN,slife.xy-asia.com,DIRECT
+DOMAIN,soup.v.qq.com,DIRECT
+DOMAIN-SUFFIX,iot-tencent.com,DIRECT
+IP-ASN,45090,DIRECT,no-resolve
+IP-ASN,132203,DIRECT,no-resolve

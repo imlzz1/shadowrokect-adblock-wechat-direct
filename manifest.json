@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-11-13T16:49:07.788158+08:00",
+  "timezone": "Asia/Shanghai",
+  "upstream": {
+    "repo": "Johnshall/Shadowrocket-ADBlock-Rules-Forever",
+    "branch": "release",
+    "file": "sr_top500_banlist_ad.conf",
+    "source": "https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_top500_banlist_ad.conf",
+    "build_time": "UTC 2026-11-12 23:02:32",
+    "sha256": "fd325d36d9093beb60c62d73983aa240da93860c02fb9dfcc9156a26aaab11ea"
+  },
+  "counts": {
+    "total_lines_including_final": 81807,
+    "rules_excluding_final": 81806,
+    "policies": {
+      "Reject": 52765,
+      "DIRECT": 33,
+      "Proxy": 29008
+    }
+  },
+  "injected": {
+    "wechat_ad_rules": 17,
+    "wechat_direct_rules": 33
+  },
+  "optimization": {
+    "upstream_rules": 83072,
+    "skipped_conflicts": 3,
+    "skipped_whitelist": 0,
+    "skipped_keywords": 1,
+    "skipped_unsupported": 1,
+    "duplicates_removed": 68,
+    "subsumed_removed": 1242
+  },
+  "files": [
+    "shadowrocket-wechat.conf",
+    "wechat-direct.list",
+    "wechat-ad.list",
+    "wechat-ad.sgmodule",
+    "manifest.json",
+    "build-report.txt",
+    "NOTICE.txt"
+  ]
+}

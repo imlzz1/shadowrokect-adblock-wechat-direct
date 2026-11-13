@@ -1,0 +1,21 @@
+# 微信小程序 / 微信广告拦截域名
+# 生成时间：2026-11-13 16:49:07 +0800
+# 这些规则必须排在微信直连规则之前；删除某行即可放行对应域名。
+
+DOMAIN-SUFFIX,wxs.qq.com,Reject
+DOMAIN,wxsmsdy.video.qq.com,Reject
+DOMAIN-SUFFIX,gdt.qq.com,Reject
+DOMAIN-SUFFIX,gdtimg.com,Reject
+DOMAIN-SUFFIX,ugdtimg.com,Reject
+DOMAIN-SUFFIX,pgdt.gtimg.cn,Reject
+DOMAIN-SUFFIX,ad.qq.com,Reject
+DOMAIN-SUFFIX,adsfile.qq.com,Reject
+DOMAIN-SUFFIX,adslvfile.qq.com,Reject
+DOMAIN-SUFFIX,l.qq.com,Reject
+DOMAIN,sdk.e.qq.com,Reject
+DOMAIN,tangram.e.qq.com,Reject
+DOMAIN,otheve.beacon.qq.com,Reject
+DOMAIN,oth.str.mdt.qq.com,Reject
+DOMAIN-SUFFIX,pingjs.qq.com,Reject
+DOMAIN-SUFFIX,tajs.qq.com,Reject
+DOMAIN-SUFFIX,ta.qq.com,Reject
