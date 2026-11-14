@@ -2,7 +2,7 @@
 #!desc=拦截微信广告投放域与广点通 GDT 广告素材；纯域名规则，无需证书。请确保它排在宽泛的 qq.com 直连规则之前。
 #!author=shadowrocket-wechat-rules
 #!category=去广告
-#!date=2026-11-13
+#!date=2026-11-14
 
 [Rule]
 
