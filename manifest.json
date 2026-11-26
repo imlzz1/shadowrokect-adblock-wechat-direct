@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-11-25T17:00:13.459867+08:00",
+  "generated_at": "2026-11-26T16:48:09.601285+08:00",
   "timezone": "Asia/Shanghai",
   "upstream": {
     "repo": "Johnshall/Shadowrocket-ADBlock-Rules-Forever",
     "branch": "release",
     "file": "sr_top500_banlist_ad.conf",
     "source": "https://raw.githubusercontent.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever/release/sr_top500_banlist_ad.conf",
-    "build_time": "UTC 2026-11-24 23:02:39",
-    "sha256": "6e59c845386c508f8702f42826d1c8ba0b960a545a68ac726d7a63886db20b4a"
+    "build_time": "UTC 2026-11-25 23:02:48",
+    "sha256": "a371bf8b37ec21af3cb792499a2be3dc23c065f9365ff678d16800746629dec1"
   },
   "counts": {
-    "total_lines_including_final": 82314,
-    "rules_excluding_final": 82313,
+    "total_lines_including_final": 82757,
+    "rules_excluding_final": 82756,
     "policies": {
-      "Reject": 53249,
+      "Reject": 53608,
       "DIRECT": 33,
-      "Proxy": 29031
+      "Proxy": 29115
     }
   },
   "injected": {
@@ -23,13 +23,13 @@
     "wechat_direct_rules": 33
   },
   "optimization": {
-    "upstream_rules": 83565,
+    "upstream_rules": 83924,
     "skipped_conflicts": 3,
     "skipped_whitelist": 0,
     "skipped_keywords": 1,
     "skipped_unsupported": 1,
     "duplicates_removed": 68,
-    "subsumed_removed": 1228
+    "subsumed_removed": 1144
   },
   "files": [
     "shadowrocket-wechat.conf",
